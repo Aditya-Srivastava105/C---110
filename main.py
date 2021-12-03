@@ -21,7 +21,13 @@ for i in range(0,1000):
   value = data[random_index]
   dataset.append(value)
 
-mean = statistics.mean(dataset)
-standarddeviation = statistics.stdev(dataset)
-print("mean of 1000 values = ", mean)
-print("standard deviation of 1000 values = ", standarddeviation)
+mean_list = []
+
+for i in range(0,1000):
+  set_of_means = random_set_of_mean(100)
+  mean_list.append(set_of_means)
+
+mean = statistics.mean(mean_list)
+standarddeviation = statistics.stdev(mean_list)
+print("mean of population = ", mean)
+print("standard deviation of population = ", standarddeviation)
